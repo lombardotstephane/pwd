@@ -1,0 +1,409 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Detail - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="" title="">
+                <img src="{{ asset("images/logo-banner.png") }}" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+    <!-- Main -->
+    <div class="main main-dt">
+        <div class="container">
+            <div class="main-cn detail-page bg-white clearfix">
+
+                <!-- Breakcrumb -->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                        <li><a href="hotel.html" title="">Campagne</a></li>
+                        <li><a href="#" title="">Rendeux </a></li>
+                        <li>Stéphane Camping</li>
+                    </ul>
+                    <div class="support float-right">
+                        <small>Vous avez une question?</small>
+                        0499/15.81.55
+                    </div>
+                </section>
+                <!-- End Breakcrumb -->
+
+                <!-- Header Detail -->
+                <section class="head-detail">
+                    <div class="head-dt-cn">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <h1>Stéphane camping</h1>
+                            </div>
+                            <div class="col-sm-5 text-right">
+                                <p class="price-book">
+                                    06/10/2016 au 08/10/2016 <span>16€</span> 4 pers.
+                                    <a href="" title="" class="awe-btn awe-btn-1 awe-btn-lager">Réserver</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Header Detail -->
+
+                <!-- Detail Slide -->
+                <section class="detail-slider">
+                    <!-- Lager Image -->
+                    <div class="slide-room-lg">
+                        <div id="slide-room-lg">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                            <img src="{{asset("images/tour/slide/img-1.jpg")}}" alt="">
+                        </div>
+                    </div>
+                    <!-- End Lager Image -->
+                    <!-- Thumnail Image -->
+                    <div class="slide-room-sm">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div id="slide-room-sm">
+                                    <img src="{{asset("images/cruise/slide/img-2.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                    <img src="{{asset("images/cruise/slide/img-3.jpg")}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Thumnail Image -->
+                </section>
+                <!-- End Detail Slide -->
+
+                <!-- Presentation -->
+                <section class="tour-overview detail-cn" id="camp-presentation">
+                    <div class="row">
+                        <div class="col-lg-3 detail-sidebar">
+                            <div class="scroll-heading">
+                                <h2>Présentation</h2>
+                                <hr class="hr">
+                                <a href="#camp-activities" title="">Activités</a>
+                                <a href="#camp-rules" title="">Règles</a>
+                                <a href="#camp-price" title="">Prix</a>
+                                <a href="#camp-contact" title="">Contact</a>
+                            </div>
+                        </div>
+
+                        <!-- Tour Overview Content -->
+                        <div class="col-lg-9 tour-overview-cn">
+
+                            <!-- Description -->
+                            <div class="tour-description">
+                                <div class="camp-description">
+                                    <h2 class="title-detail">
+                                        Description
+                                    </h2>
+                                    <div class="tour-detail-text">
+                                        <p>
+                                            Rendeux est un petit village très accueillant au coeur des ardennes belges.
+                                            Cette région est favorable à une multitude de sports et loisirs patati
+                                            patata
+                                            J'aime le camping et j'en profite d'avoir un grand jardin pour vous
+                                            accueillir
+                                            du mieux que je peux dans un cadre idylique (et je sais pas comment ca
+                                            s'écrit).
+                                            Je vous propose donc de venir passer un séjour dans mon mini-camping bien
+                                            équipé. Je loue également des tentes et ma belle-mère si vous voulez et
+                                            d'ailleur je la loue pas je la donne... Quoique je veux même bien payer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Description -->
+
+                            <div class="tour-itinerary">
+                                <div class="camp-equipment">
+                                    <h2 class="title-detail">Equipement</h2>
+                                    <br>
+                                    <table class="table">
+                                        <tr>
+                                            <td><img src="{{ asset("images/icon/swimming-pool.png") }}" alt="piscine"/>Piscine</td>
+                                            <td><img src="images/icon/bonfire.png" alt="feu"/>Feu</td>
+                                            <td><img src="images/icon/cutlery.png" alt="restauration"/>Restauration</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon/fence.png" alt="cloture"/>Clôturé</td>
+                                            <td><img src="images/icon/hut.png" alt="abri"/>Abri</td>
+                                            <td><img src="images/icon/swimming-pool.png" alt="piscine"/>Piscine</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon/idea.png" alt="ampoule"/>Electricité</td>
+                                            <td><img src="images/icon/swing.png" alt="balancoire"/>Jeux enfants</td>
+                                            <td><img src="images/icon/umbrella.png" alt="table"/>Table</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon/trees.png" alt="arbre"/>Ombre</td>
+                                            <td><img src="images/icon/wheelchair.png" alt="chaise roulante"/>Accès
+                                                handicapés
+                                            </td>
+                                            <td><img src="images/icon/swimming-pool.png" alt="piscine"/>Piscine</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End equipement -->
+
+                    </div>
+                </section>
+                <!-- End presentation -->
+
+                <!-- Activities -->
+                <section class="optional-acitivites detail-cn" id="camp-activities">
+                    <div class="row">
+                        <div class="col-lg-3 detail-sidebar">
+                            <div class="scroll-heading">
+                                <h2>Activités</h2>
+                                <hr class="hr">
+                                <a href="#camp-presentation" title="">Présentation</a>
+                                <a href="#camp-rules" title="">Règles</a>
+                                <a href="#camp-price" title="">Prix</a>
+                                <a href="#camp-contact" title="">Contact</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 optional-acitivites-cn">
+                            <!-- Optional Text -->
+                            <div class="tour-detail-text">
+                                <div class="camp-activities">
+                                    <h2 class="title-detail">
+                                        Activités
+                                    </h2>
+                                    <br>
+                                    <p>
+                                        Voici les activités disponibles à moins de 15 kilomètres
+                                    </p>
+                                    <br>
+                                    <table class="table">
+                                        <tr>
+                                            <td><img src="images/icon/backpack.png" alt="sac à dos"/>Randonnée</td>
+                                            <td><img src="images/icon/bicycle.png" alt="vélo"/>Vtt</td>
+                                            <td><img src="images/icon/fishing.png" alt="pêche"/>pêche</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon/hunting-trophy.png" alt="trophée de chasse"/>Chasse
+                                            </td>
+                                            <td><img src="images/icon/kayak.png" alt="kayak"/>Kayak</td>
+                                            <td><img src="images/icon/mountains.png" alt="montagne"/>Ski</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/icon/pawprints.png" alt="ampoule"/>Zoo</td>
+                                            <td><img src="images/icon/ping-pong.png" alt="ping-pong"/>Ping-pong</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- End Optional Text -->
+                            <div class="optional-list">
+                                <!-- Optional Item -->
+                                <h4>Autres activités</h4>
+                                <p>
+                                    Saut à l'élastique
+                                </p>
+                                <p>
+                                    Géocaching
+                                </p>
+                                <!-- End Optional Item -->
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Activities -->
+
+                <!-- Rules -->
+                <section class="accomodation detail-cn" id="camp-rules">
+                    <div class="row">
+                        <div class="col-lg-3 detail-sidebar">
+                            <div class="scroll-heading">
+                                <h2>Règles</h2>
+                                <hr class="hr">
+                                <a href="#camp-presentation" title="">Présentation</a>
+                                <a href="#camp-activities" title="">Activités</a>
+                                <a href="#camp-price" title="">Prix</a>
+                                <a href="#camp-contact" title="">Contact</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 accomodation-cn">
+                            <div class="tour-detail-text">
+                                <div class="camp-rules">
+                                    <h2 class="title-detail">
+                                        Règles
+                                    </h2>
+                                    <br>
+                                    <p>
+                                        - La piscine est ouverte du 01 Avril au 31 Octobre. Je ne suis en aucun cas
+                                        responsable des accident éventuels survenant dans la piscine.
+                                        Les enfants de moins de 12 ans doivent être accompagnés.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Les jeunes de moins de 16 ans doivent être accompagnés.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Le camping est un site naturel, il est impératif de le laisser propre à son
+                                        départ, sous peine d'amande (100€).
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Le tri des déchet est de mise, des poubelles sont prévues à cet effet.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Je suis un chiant qui met plein de règles.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Il est interdit de faire du feu en dehors de l'emplacement prévu à cet effet.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Le gaspillage d'eau ou d'électricité sera facturé.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Il est demandé de ne plus faire de bruit après 23h.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End rules-->
+
+                <!-- Price -->
+                <section class="tour-meals detail-cn" id="camp-price">
+                    <div class="row">
+                        <div class="col-lg-3 detail-sidebar">
+                            <div class="scroll-heading">
+                                <h2>Prix</h2>
+                                <hr class="hr">
+                                <a href="#camp-presentation" title="">Présentation</a>
+                                <a href="#camp-activities" title="">Activités</a>
+                                <a href="#camp-rules" title="">Règles</a>
+                                <a href="#camp-contact" title="">Contact</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 tour-meals-cn">
+                            <div class="camp-prices">
+                                <h2 class="title-detail">
+                                    Prix
+                                </h2>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-3"></div>
+                                    <div class="col-lg-9 detail-footer-cn text-right">
+                                        <p class="price-book">
+                                            06/10/2016 au 08/10/2016 <span>16€</span> 4 pers.
+                                            <a href="" title="" class="awe-btn awe-btn-1 awe-btn-lager">Réserver</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>plplpl</p>
+                                <p>plplpl</p>
+                                <p>plplpl</p>
+                                <p>plplpl</p>
+                                <p>plplpl</p>
+                                <p>plplpl</p>
+                                <p>plplpl</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End price-->
+
+                <!-- contact -->
+                <section class="accomodation detail-cn" id="camp-contact">
+                    <div class="row-form">
+                        <div class="col-md-3 detail-sidebar">
+                            <div class="scroll-heading">
+                                <h2>Contact</h2>
+                                <hr class="hr">
+                                <a href="#camp-presentation" title="">Présentation</a>
+                                <a href="#camp-activities" title="">Activités</a>
+                                <a href="#camp-price" title="">Prix</a>
+                                <a href="#camp-rules" title="">Règles</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
+
+                            <div class="user-profile__header">
+                                <a href="{{ path("cch_user_public") }}" title=""><h4>Stéphane Lombardot</h4> </a>
+                                <span>Membre depuis mai 2015</span>
+                                <p>
+                                    <img src="{{ asset("images/user/img-1.jpg") }}" alt="">
+                                </p>
+
+                            </div>
+
+                            <ul class="user-profile__navigation">
+                            </ul>
+
+                            <div class="review-number">
+                                <ins>8.6</ins>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="payment-form">
+                        <div class="row form">
+                            <div class="col-md-6">
+                                <h2>Contactez le propriétaire</h2>
+                                <div class="form-field">
+                                    <input type="text" placeholder="Prénom" class="field-input">
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" placeholder="Nom" class="field-input">
+                                </div>
+                                <div class="form-field">
+                                    <input type="text" placeholder="Email" class="field-input">
+                                </div>
+                                <div class="form-field">
+                                    <textarea placeholder="Votre message" class="field-input"></textarea>
+                                </div>
+                            </div>
+                            <div class="submit text-center">
+                                <button class="awe-btn awe-btn-1 awe-btn-lager">Envoyer</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+                <!-- End contact-->
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

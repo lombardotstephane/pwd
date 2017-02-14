@@ -1,0 +1,5 @@
+cch_camp:
+    resource: "@CCHCampBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

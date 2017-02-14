@@ -1,0 +1,71 @@
+<?php
+
+namespace CCH\CampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SupAct
+ *
+ * @ORM\Table(name="sup_act")
+ * @ORM\Entity(repositoryClass="CCH\CampBundle\Repository\SupActRepository")
+ */
+class SupAct
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\CampBundle\Entity\Camp")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $camp;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="supact", type="string", length=255)
+     */
+    private $supact;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set supact
+     *
+     * @param string $supact
+     *
+     * @return SupAct
+     */
+    public function setSupact($supact)
+    {
+        $this->supact = $supact;
+
+        return $this;
+    }
+
+    /**
+     * Get supact
+     *
+     * @return string
+     */
+    public function getSupact()
+    {
+        return $this->supact;
+    }
+}
+

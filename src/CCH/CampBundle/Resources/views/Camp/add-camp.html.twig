@@ -1,0 +1,385 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Ajouter - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="" title="">
+                <img src="{{ asset("images/logo-banner.png") }}" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn bg-white clearfix">
+                <div class="stepwizard">
+                    <div class="stepwizard-row setup-panel">
+                        <ul class="payment-step text-center clearfix">
+                            <li class="stepwizard-step step-part">
+                                <a href="#step-1" type="button" type="button" class="btn btn-primary"><span>1</span></a>
+                                <p>Informations</p>
+                            </li>
+                            <li class="stepwizard-step">
+                                <a href="#step-2" type="button" class="btn btn-default"
+                                   disabled="disabled"><span>2</span></a>
+                                <p>Photos</p>
+                            </li>
+                            <li class="stepwizard-step">
+                                <a href="#step-3" type="button" class="btn btn-default"
+                                   disabled="disabled"><span>3</span></a>
+                                <p>Equipements</p>
+                            </li>
+                            <li class="stepwizard-step">
+                                <a href="#step-4" type="button" class="btn btn-default"
+                                   disabled="disabled"><span>4</span></a>
+                                <p>Activités</p>
+                            </li>
+                            <li class="stepwizard-step">
+                                <a href="#step-5" type="button" class="btn btn-default"
+                                   disabled="disabled"><span>5</span></a>
+                                <p>Prix</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <form role="form">
+                    <div class="row setup-content" id="step-1">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <h3>Etape 1: Informations</h3>
+                                <div class="form-group">
+                                    <label class="control-label">Nom du camping</label>
+                                    <input maxlength="255" type="text" required="required" class="form-control"
+                                           placeholder="Nom du camping"/>
+                                </div>
+                                <div id="checkboxGroup">
+                                    <label class="control-label">Type:</label>
+                                    <ul class="form-radio">
+                                        <li>
+                                            <div class="radio-checkbox">
+                                                <input type="checkbox" name="radio-type" id="radio-tent"
+                                                       class="checkbox form-control">
+                                                <label for="radio-tent"><img src="{{ asset("images/icon/tent.png")}}" alt="tentIcon">Tente</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio-checkbox">
+                                                <input type="checkbox" name="radio-type" id="radio-caravan"
+                                                       class="checkbox form-control">
+                                                <label for="radio-caravan"><img src="{{ asset("images/icon/caravan.png")}}"
+                                                                                alt="tentIcon">
+                                                    Caravanne</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio-checkbox">
+                                                <input type="checkbox" name="radio-type" id="radio-motorhome"
+                                                       class="checkbox form-control">
+                                                <label for="radio-motorhome"><img src="{{ asset("images/icon/motorhome.png")}}"
+                                                                                  alt="tentIcon">
+                                                    Motorhome</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Description:</label>
+                                    <textarea class="form-control" rows="13" id="description"
+                                              required="required" placeholder="Description du camping"></textarea>
+                                </div>
+                                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row setup-content" id="step-2">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <h3> Etape 2: Photos</h3>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 1</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp1">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-1'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 2</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp2">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-2'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 3</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp3">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-3'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 4</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp4">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-4'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 5</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp5">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-5'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 6</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp6">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-6'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 7</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp7">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-7'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Photo 8</label>
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-default btn-file">
+                                                    Chercher… <input type="file" class="imgInp8">
+                                                </span>
+                                            </span>
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                        <img class='img-upload-8'/>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row setup-content" id="step-3">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <h3> Etape 3: Les équipements</h3>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-piscine"
+                                                   class="checkbox"><label for="radio-piscine"><img
+                                                        src="images/icon/swimming-pool.png" alt="piscine"/>Piscine</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-feu"
+                                                   class="checkbox"><label for="radio-feu"><img
+                                                        src="images/icon/bonfire.png" alt="feu"/>Feu</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-restauration"
+                                                   class="checkbox"><label for="radio-restauration"><img
+                                                        src="images/icon/cutlery.png" alt="restauration"/>Restauration</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-cloture"
+                                                   class="checkbox"><label for="radio-cloture"><img
+                                                        src="images/icon/fence.png" alt="cloture"/>Clôturé</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-abri"
+                                                   class="checkbox"><label for="radio-abri"><img
+                                                        src="images/icon/hut.png" alt="abri"/>Abri</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-trousse"
+                                                   class="checkbox"><label for="radio-trousse"><img
+                                                        src="images/icon/first-aid-kit.png" alt="trousse"/>Trousse de
+                                                secours</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-electricite"
+                                                   class="checkbox"><label for="radio-electricite"><img
+                                                        src="images/icon/idea.png" alt="ampoule"/>Electricité</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-jeux"
+                                                   class="checkbox"><label for="radio-jeux"><img
+                                                        src="images/icon/swing.png" alt="balancoire"/>Jeux enfants</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-table" class="checkbox"><label
+                                                    for="radio-table"><img src="images/icon/umbrella.png" alt="table"/>Table</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-ombre" class="checkbox"><label
+                                                    for="radio-ombre"><img src="images/icon/trees.png"
+                                                                           alt="arbre"/>Ombre</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-handicape"
+                                                   class="checkbox"><label for="radio-handicape"><img
+                                                        src="images/icon/wheelchair.png" alt="chaise roulante"/>Accès
+                                                handicapés
+                                            </label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-piscine3"
+                                                   class="checkbox"><label for="radio-piscine3"><img
+                                                        src="images/icon/garbage.png" alt="poubelle"/>Poubelles de tri</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-aeroport"
+                                                   class="checkbox"><label for="radio-aeroport"><img
+                                                        src="images/icon/departure.png" alt="avion"/>Aeroport<25km</label></td>
+                                        <td><input type="checkbox" name="radio-equip" id="radio-video" class="checkbox"><label
+                                                    for="radio-video"><img src="images/icon/swing.png" alt="camero"/>Surveillance</label>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                                <table id="equipSuppl">
+
+                                </table>
+                                <div class="col-md-4">
+                                    <input maxlength="255" type="text" class="form-plus col-md-4"
+                                           placeholder="Autre équipement"/>
+                                    <button class="col-md-2 btnPlus" type="button">+</button>
+                                </div>
+
+                                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row setup-content" id="step-4">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <h3> Etape 4: Les activités à moins de 25km</h3>
+                                <table class="table">
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-rando"
+                                                   class="checkbox"><label for="radio-rando"><img
+                                                        src="images/icon/backpack.png" alt="sac à dos"/>Randonnée</label></td>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-vtt"
+                                                   class="checkbox"><label for="radio-vtt"><img
+                                                        src="images/icon/bicycle.png" alt="vélo"/>Vtt</label></td>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-peche"
+                                                   class="checkbox"><label for="radio-peche"><img
+                                                        src="images/icon/fishing.png" alt="pêche"/>pêche</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-chasse"
+                                                   class="checkbox"><label for="radio-chasse"><img
+                                                        src="images/icon/hunting-trophy.png" alt="trophée de chasse"/>Chasse
+                                        </td>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-kayak"
+                                                   class="checkbox"><label for="radio-kayak"><img
+                                                        src="images/icon/kayak.png" alt="kayak"/>Kayak</label></td>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-ski"
+                                                   class="checkbox"><label for="radio-ski"><img
+                                                        src="images/icon/mountains.png" alt="montagne"/>Ski</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-zoo"
+                                                   class="checkbox"><label for="radio-zoo"><img
+                                                        src="images/icon/pawprints.png" alt="pas"/>Zoo</label></td>
+                                        <td><input type="checkbox" name="radio-activities" id="radio-ping"
+                                                   class="checkbox"><label for="radio-ping"><img
+                                                        src="images/icon/ping-pong.png" alt="ping-pong"/>Ping-pong</label></td>
+                                    </tr>
+                                </table>
+                                <table id="actSuppl">
+
+                                </table>
+                                <div class="col-md-4">
+                                    <input maxlength="255" type="text" class="form-plus-act col-md-4"
+                                           placeholder="Autre équipement"/>
+                                    <button class="col-md-2 btnPlusAct" type="button">+</button>
+                                </div>
+
+                                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row setup-content" id="step-5">
+                        <div class="col-xs-12">
+                            <div class="col-md-12">
+                                <h3>Etape  5: Définir les prix</h3>
+                                <table class="table-price">
+
+                                </table>
+
+                                <div class="form-field col-md-3">
+                                    <input type="text" class="field-input form-control calendar-input form-calendar-price-from" placeholder="De">
+                                </div>
+                                <div class="form-field col-md-3">
+                                    <input type="text" class="field-input form-control calendar-input form-calendar-price-to" placeholder="à">
+                                </div>
+                                <div class="form-field col-md-3">
+                                    <input maxlength="255" type="number" class="form-control form-price"
+                                           placeholder="€"/>
+                                </div>
+                                <div class="col-md-3">
+                                    <input maxlength="255" type="button" class="btn btn-plus-prix" value="+"/>
+                                </div>
+
+                                <button class="btn btn-success btn-lg pull-right" type="submit">Terminer</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

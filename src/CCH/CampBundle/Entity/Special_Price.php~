@@ -1,0 +1,133 @@
+<?php
+
+namespace CCH\CampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Special_Price
+ *
+ * @ORM\Table(name="special__price")
+ * @ORM\Entity(repositoryClass="CCH\CampBundle\Repository\Special_PriceRepository")
+ */
+class Special_Price
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\CampBundle\Entity\Camp")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $camp;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date1", type="date")
+     */
+    private $date1;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date2", type="date")
+     */
+    private $date2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="price_pppn", type="integer")
+     */
+    private $pricePppn;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set date1
+     *
+     * @param \DateTime $date1
+     *
+     * @return Special_Price
+     */
+    public function setDate1($date1)
+    {
+        $this->date1 = $date1;
+
+        return $this;
+    }
+
+    /**
+     * Get date1
+     *
+     * @return \DateTime
+     */
+    public function getDate1()
+    {
+        return $this->date1;
+    }
+
+    /**
+     * Set date2
+     *
+     * @param \DateTime $date2
+     *
+     * @return Special_Price
+     */
+    public function setDate2($date2)
+    {
+        $this->date2 = $date2;
+
+        return $this;
+    }
+
+    /**
+     * Get date2
+     *
+     * @return \DateTime
+     */
+    public function getDate2()
+    {
+        return $this->date2;
+    }
+
+    /**
+     * Set pricePppn
+     *
+     * @param integer $pricePppn
+     *
+     * @return Special_Price
+     */
+    public function setPricePppn($pricePppn)
+    {
+        $this->pricePppn = $pricePppn;
+
+        return $this;
+    }
+
+    /**
+     * Get pricePppn
+     *
+     * @return int
+     */
+    public function getPricePppn()
+    {
+        return $this->pricePppn;
+    }
+}
+

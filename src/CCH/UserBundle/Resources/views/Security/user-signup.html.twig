@@ -1,0 +1,83 @@
+{% extends "CCHUserBundle::layout.html.twig" %}
+
+{% block title %}
+    Connexion - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="{{ path("cch_camp_homepage") }}" title="">
+                <img src="images/logo-banner.png" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="{{ path("cch_camp_homepage") }}"><i class="fa fa-home"></i></a></li>
+                        <li>Connexion</li>
+                    </ul>
+
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="user-form user-signup">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2 class="user-profile__title">Connexion</h2>
+                                {% if error %}
+                                    <div class="alert alert-danger text-center" stlye="border-radius:10px;">
+                                        {{ error.message|trans({'Bad credentials': 'Login ou mot de passe incorrect'}) }}
+                                    </div>
+                                {% endif %}
+                                <form action="{{ path('fos_user_security_check') }}" method="post">
+                                    <div class="form-group">
+                                        <input type="email" name="_username" id="email" class="form-control" placeholder="Email *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="_password" id="password" class="form-control" placeholder="Mot de passe *">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="check-box">
+                                            <input type="checkbox" id="remember_me" name="_remember_me">
+                                            <label for="remember_me">Se souvenir</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" name="_submit" value="Go" class="awe-btn awe-btn-1 awe-btn-medium" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-5 col-md-offset-2">
+                                <h2 class="user-profile__title">Vous venez pour la première fois?</h2>
+                                {% if msgError != null%}
+                                    <div class="alert alert-danger text-center" stlye="border-radius:10px;">
+                                        {{ msgError }}
+                                    </div>
+                                {% endif %}
+                                {{ form(form) }}
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

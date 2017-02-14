@@ -1,0 +1,21 @@
+{%  set route = app.request.get('_route') %}
+
+<ul class="menu-list text-uppercase">
+    <li  {{ 'home' in route ? 'class="current-menu-parent"' }}>
+        <a href="{{ path("cch_camp_homepage") }}" title=""><img class="navIcon" src="{{ asset('images/icon/homeIcon.png') }}"
+                                                                alt="Icon" width="25"/> Accueil</a>
+    </li>
+    <li>
+        <a href="#"><img class="navIcon" src="{{ asset('images/icon/aboutIcon.png') }}" alt="Icon"
+                         width="25"/> A propos</a>
+    </li>
+    <li>
+        <a href="{{ path("cch_camp_add") }}"><img class="navIcon" src="{{ asset('images/icon/editIcon.png') }}" alt="Icon"
+                         width="25"/> Proposer un terrain</a>
+    </li>
+    <li>
+        <a href="{{ path("cch_user_profil") }}"><img class="navIcon" src="{{ asset('images/icon/userIcon.png') }}" alt="Icon"
+                         width="25"/> Mon compte</a>
+    </li>
+
+</ul>

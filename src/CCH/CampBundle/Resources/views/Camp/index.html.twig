@@ -1,0 +1,193 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <section class="banner">
+
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+
+        <div class="container">
+
+            <div class="logo-banner text-center">
+                <a href="" title="">
+                    <img src="{{ asset("images/logo-banner.png") }}" alt="">
+                </a>
+            </div>
+
+            <!-- Banner Content -->
+            <div class="banner-cn">
+
+                <!-- Tabs Cat Form -->
+                <ul class="tabs-cat text-center row">
+                    <li class="cate-item col-xs-2">
+                        <a data-toggle="tab" href="#form-search" title="">
+                            <span>Tous</span>
+
+                        </a>
+                    </li>
+                    <li class="cate-item active col-xs-2">
+                        <a data-toggle="tab" href="#form-search" title=""><span>Mer</span>
+                            <img src="{{ asset('images/navigation/merNav.jpg') }}" alt=""></a>
+                    </li>
+                    <li class="cate-item col-xs-2">
+                        <a data-toggle="tab" href="#form-search" title=""><span>Montagne</span><img
+                                    src="{{ asset('images/navigation/montagneNav.jpg') }}" alt=""></a>
+                    </li>
+                    <li class="cate-item col-xs-2">
+                        <a data-toggle="tab" href="#form-search" title=""><span>Ville</span><img
+                                    src="{{ asset('images/navigation/villeNav.jpg') }}" alt=""></a>
+                    </li>
+                    <li class="cate-item col-xs-2">
+                        <a data-toggle="tab" href="#form-search" title=""><span>Campagne</span><img
+                                    src="{{ asset('images/navigation/campagneNav.jpg') }}" alt=""></a>
+                    </li>
+                    <li class="cate-item col-xs-2">
+                        <a data-toggle="tab" href="#form-search" title=""><span>Insolite</span><img
+                                    src="{{ asset('images/navigation/insoliteNav.jpg') }}" alt=""></a>
+                    </li>
+                </ul>
+                <!-- End Tabs Cat -->
+
+                <!-- Tabs Content -->
+                <div class="tab-content">
+
+
+                    <!-- Search Camp -->
+                    <div class="form-cn form-package tab-pane active in" id="form-search">
+                        <ul class="form-radio">
+                            <li>
+                                <div class="radio-checkbox">
+                                    <input type="radio" name="radio-1" id="radio-1" class="radio">
+                                    <label for="radio-1"><img src="{{ asset('images/icon/tent.png') }}" alt="tentIcon">Tente</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="radio-checkbox">
+                                    <input type="radio" name="radio-1" id="radio-2" class="radio">
+                                    <label for="radio-2"><img src="{{ asset('images/icon/caravan.png') }}" alt="tentIcon">
+                                        Caravanne</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="radio-checkbox">
+                                    <input type="radio" name="radio-1" id="radio-3" class="radio">
+                                    <label for="radio-3"><img src="{{ asset('images/icon/motorhome.png') }}" alt="tentIcon"> Motorhome</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="form-search clearfix">
+                            <div class="form-field field-from">
+                                <label for="destination"><span>Où?</span> Pays, Région, Lieux,...</label>
+                                <input type="text" id="destination" class="field-input">
+                            </div>
+                            <div class="form-field field-date">
+                                <input type="text" class="field-input calendar-input" placeholder="De">
+                            </div>
+                            <div class="form-field field-date">
+                                <input type="text" class="field-input calendar-input" placeholder="à">
+                            </div>
+                            <div class="form-field field-select field-adults">
+                                <div class="select">
+                                    <span>Personnes</span>
+                                    <select>
+                                        <option>Personnes</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--<a href="#">
+                            <div class="form-field form-submit">
+                                <img src="images/icon/searchIcon.png" width="50"/>
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="form-submit">
+                                <img src="images/icon/mapIcon.png" width="50"/>
+                            </div>
+                                </a>-->
+                            <div class="form-submit">
+                                <button type="submit" class="awe-btn awe-btn-medium awe-search">Chercher</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Search Camp -->
+
+
+                </div>
+                <!-- End Tabs Content -->
+
+            </div>
+            <!-- End Banner Content -->
+
+        </div>
+
+    </section>
+
+
+    <section class="sales">
+        <!-- Title -->
+        <div class="title-wrap">
+            <div class="container">
+                <div class="travel-title float-left">
+                    <h2>Nouveautés: <span>Découvrez les derniers campings ajoutés!</span></h2>
+                </div>
+            </div>
+        </div>
+        <!-- End Title -->
+        <!-- Hot Sales Content -->
+        <div class="container">
+            <div class="sales-cn">
+                <div class="row">
+
+                    {% for i in 0..7 %}
+                        <!-- HostSales Item -->
+                        <div class="col-xs-6 col-md-3">
+                            <div class="sales-item">
+                                <figure class="home-sales-img">
+                                    <a href="{{ path("cch_camp_detail") }}" title="">
+                                        <img src="{{ asset('images/deal/img-1.jpg') }}" alt="">
+                                    </a>
+                                    <figcaption>
+                                        àpd<br><span>4</span>€
+                                    </figcaption>
+                                </figure>
+                                <div class="home-sales-text">
+                                    <div class="home-sales-name-places">
+                                        <div class="home-sales-name">
+                                            <a href="{{ path("cch_camp_detail") }}" title="">Stéphane camping</a>
+                                        </div>
+                                        <div class="home-sales-places">
+                                            <a href="" title="">Rendeux</a>,
+                                            <a href="" title="">Belgique</a>
+                                        </div>
+                                    </div>
+                                    <hr class="hr">
+                                    <div class="price-box">
+                                        <span class="price old-price">A partir de</span>
+                                        <span class="price special-price">4€<small>/nuit</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End HostSales Item -->
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+        <!-- End Hot Sales Content -->
+    </section>
+    <!-- End Sales -->
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Admin Camping - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="{{ path("cch_camp_homepage") }}" title="">
+                <img src="{{ asset('images/logo-banner.png') }}" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="{{ path("cch_camp_homepage") }}"><i class="fa fa-home"></i></a></li>
+                        <li>Administration</li>
+                    </ul>
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="user-profile__header">
+                                <h4>Espace admin</h4>
+                                <span>Connecté en temps que admin</span>
+                            </div>
+                            <ul class="user-profile__navigation">
+                                <li><a href="{{ path('cch_admin_campValid') }}">Validation camping</a></li>                               
+                                <li><a href="{{ path('cch_admin_equip') }}">Equipements</a></li>                               
+                                <li class="current"><a href="{{ path('cch_admin_activity') }}">Activités</a></li>                               
+                            </ul>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="user-profile__title">Activités</h2>
+
+                            <div class="user-profile__my-booking table-responsive">
+                                <div class="pull-right">
+                                    <a class="btn btn-success right" href="{{ path('cch_admin_activityAdd') }}">Ajouter</a>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Activité</th>
+                                            <th>Image</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    {% for activity in activities %}
+                                        <tr>
+                                            <td>{{ activity.activity }}</td>
+                                            <td><img src="{{ asset(activity.imageUrl.webPath) }}" /></td>
+                                            <td><a href="{{ path('cch_admin_activityDel',{'id':activity.id}) }}">Supprimer</a></td>
+                                        <tr/>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

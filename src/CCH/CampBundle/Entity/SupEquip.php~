@@ -1,0 +1,71 @@
+<?php
+
+namespace CCH\CampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SupEquip
+ *
+ * @ORM\Table(name="sup_equip")
+ * @ORM\Entity(repositoryClass="CCH\CampBundle\Repository\SupEquipRepository")
+ */
+class SupEquip
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\CampBundle\Entity\Camp")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $camp;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="supequip", type="string", length=255)
+     */
+    private $supequip;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set supequip
+     *
+     * @param string $supequip
+     *
+     * @return SupEquip
+     */
+    public function setSupequip($supequip)
+    {
+        $this->supequip = $supequip;
+
+        return $this;
+    }
+
+    /**
+     * Get supequip
+     *
+     * @return string
+     */
+    public function getSupequip()
+    {
+        return $this->supequip;
+    }
+}
+

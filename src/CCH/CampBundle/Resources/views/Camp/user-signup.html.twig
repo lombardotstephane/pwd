@@ -1,0 +1,86 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    User - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="" title="">
+                <img src="images/logo-banner.png" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                        <li>Connexion</li>
+                    </ul>
+
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="user-form user-signup">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2 class="user-profile__title">Connexion</h2>
+                                <div class="field-input">
+                                    <input type="text" class="input-text" value="Email *">
+                                </div>
+                                <div class="field-input">
+                                    <input type="text" class="input-text" value="Mot de passe *">
+                                </div>
+                                <div class="field-input">
+                                    <div class="check-box">
+                                        <input type="checkbox" id="checkbox">
+
+                                    </div>
+
+                                </div>
+                                <div class="field-input">
+                                    <button class="awe-btn awe-btn-1 awe-btn-medium">Go</button>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-md-offset-2">
+                                <h2 class="user-profile__title">Vous venez pour la première fois?</h2>
+
+                                <div class="field-input">
+                                    <input type="text" class="input-text" value="Prénom *">
+                                </div>
+                                <div class="field-input">
+                                    <input type="text" class="input-text" value="Nom *">
+                                </div>
+                                <div class="field-input">
+                                    <input type="text" class="input-text" value="Email *">
+                                </div>
+                                <div class="field-input">
+                                    <input type="text" class="input-text" value="Mot de passe *">
+                                </div>
+
+                                <div class="field-input">
+                                    <button class="awe-btn awe-btn-1 awe-btn-medium">S'inscrire</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

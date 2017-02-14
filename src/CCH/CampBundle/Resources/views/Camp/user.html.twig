@@ -1,0 +1,258 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    User - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="" title="">
+                <img src="images/logo-banner.png" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                        <li>Stéphane Lombardot</li>
+                    </ul>
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="user-profile__header">
+                                <h4>Stéphane Lombardot</h4>
+                                <span>Membre depuis Mai 2015</span>
+                                <p>
+                                    <img src="images/user/img-1.jpg" alt="">
+                                </p>
+                            </div>
+                            <ul class="user-profile__navigation">
+                                <li><a href="user-profile.html"><img src="images/icon/icon-user.png" alt="">Mon profil</a></li>
+                                <li class="current"><a href="user-booking.html"><img src="images/icon/icon-setting.png" alt="">Tableau de bord</a></li>
+
+                                <li><a href="#"><img src="images/icon/icon-back.png" alt="">Sign out</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="user-profile__title">Mes réservations</h2>
+
+                            <ul class="user-profile__total">
+                                <li class="has-number">Mes réservations(<span>2</span>)</li>
+                                <li class="has-number">Demande de réservation(<span>1</span>)</li>
+                                <li>Messages(<span>0</span>)</li>
+
+                            </ul>
+                            <div class="user-profile__my-booking table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+
+                                        <th>Nom du camping</th>
+                                        <th>Du</th>
+                                        <th>Au</th>
+                                        <th>Prix</th>
+                                        <th>Personnes</th>
+                                        <th>Statut</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tr>
+
+                                        <td>
+                                            Quelque part
+                                        </td>
+                                        <td>
+                                            30/04/2017
+                                        </td>
+                                        <td>
+                                            02/05/2017
+                                        </td>
+                                        <td>
+                                            24€
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            Comfirmé
+                                        </td>
+                                        <td>
+                                            <a href="#">Annuler</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Ailleur
+                                        </td>
+                                        <td>
+                                            31/01/2015
+                                        </td>
+                                        <td>
+                                            04/02/2015
+                                        </td>
+                                        <td>
+                                            60€
+                                        </td>
+                                        <td>
+                                            5
+                                        </td>
+                                        <td>
+                                            Terminé
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <
+
+                        <div class="col-md-9">
+                            <h2 class="user-profile__title">Demandes de réservation</h2>
+
+                            <ul class="user-profile__total">
+                                <li class="has-number">Mes réservations(<span>2</span>)</li>
+                                <li class="has-number">Demande de réservation(<span>1</span>)</li>
+                                <li>Messages(<span>0</span>)</li>
+
+                            </ul>
+                            <div class="user-profile__my-booking table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+
+                                        <th>Nom du camping</th>
+                                        <th>Du</th>
+                                        <th>Au</th>
+                                        <th>Prix</th>
+                                        <th>Personnes</th>
+                                        <th>Statut</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tr>
+
+                                        <td>
+                                            Steph Camping
+                                        </td>
+                                        <td>
+                                            30/04/2017
+                                        </td>
+                                        <td>
+                                            02/05/2017
+                                        </td>
+                                        <td>
+                                            24€
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            <a href="#">Comfirmer</a>
+                                        </td>
+                                        <td>
+                                            <a href="#">Annuler</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Champètre camping
+                                        </td>
+                                        <td>
+                                            31/01/2015
+                                        </td>
+                                        <td>
+                                            04/02/2015
+                                        </td>
+                                        <td>
+                                            60€
+                                        </td>
+                                        <td>
+                                            5
+                                        </td>
+                                        <td>
+                                            Terminé
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-9">
+                            <h2 class="user-profile__title">Messages</h2>
+
+                            <ul class="user-profile__total">
+                                <li class="has-number">Mes réservations(<span>2</span>)</li>
+                                <li class="has-number">Demande de réservation(<span>1</span>)</li>
+                                <li>Messages(<span>0</span>)</li>
+
+                            </ul>
+                            <div class="user-profile__my-booking table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+
+                                        <th>Camping</th>
+                                        <th>Nom</th>
+                                        <th>Date</th>
+                                        <th>Message</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tr>
+
+                                        <td>
+                                            Steph Camping
+                                        </td>
+                                        <td>
+                                            Jonathan Cambier
+                                        </td>
+                                        <td>
+                                            24/05/2016 10:12
+                                        </td>
+                                        <td>
+                                            Tatvyd  bzueyfb uzebuybuy bqzebfqzebfuzyebfyb eyb yb ybyb yb yb y by b ybuy buy vut v tv tyv tyv tyv tyvut vtuvtug vtuv tuv tcv tyv
+                                        </td>
+                                        <td>
+                                            <a href="#">Répondre</a>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

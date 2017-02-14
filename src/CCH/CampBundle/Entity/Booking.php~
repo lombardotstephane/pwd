@@ -1,0 +1,169 @@
+<?php
+
+namespace CCH\CampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Booking
+ *
+ * @ORM\Table(name="booking")
+ * @ORM\Entity(repositoryClass="CCH\CampBundle\Repository\BookingRepository")
+ */
+class Booking
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date1", type="date")
+     */
+    private $date1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date2", type="string", length=255)
+     */
+    private $date2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nbPeople", type="integer")
+     */
+    private $nbPeople;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="confirmed", type="boolean")
+     */
+    private $confirmed;
+
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\UserBundle\Entity\User",cascade={"persist"})
+     */
+    private $user;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\CampBundle\Entity\Camp",cascade={"persist"})
+     */
+    private $camp;
+    
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set date1
+     *
+     * @param \DateTime $date1
+     *
+     * @return Booking
+     */
+    public function setDate1($date1)
+    {
+        $this->date1 = $date1;
+
+        return $this;
+    }
+
+    /**
+     * Get date1
+     *
+     * @return \DateTime
+     */
+    public function getDate1()
+    {
+        return $this->date1;
+    }
+
+    /**
+     * Set date2
+     *
+     * @param string $date2
+     *
+     * @return Booking
+     */
+    public function setDate2($date2)
+    {
+        $this->date2 = $date2;
+
+        return $this;
+    }
+
+    /**
+     * Get date2
+     *
+     * @return string
+     */
+    public function getDate2()
+    {
+        return $this->date2;
+    }
+
+    /**
+     * Set nbPeople
+     *
+     * @param integer $nbPeople
+     *
+     * @return Booking
+     */
+    public function setNbPeople($nbPeople)
+    {
+        $this->nbPeople = $nbPeople;
+
+        return $this;
+    }
+
+    /**
+     * Get nbPeople
+     *
+     * @return int
+     */
+    public function getNbPeople()
+    {
+        return $this->nbPeople;
+    }
+
+    /**
+     * Set confirmed
+     *
+     * @param boolean $confirmed
+     *
+     * @return Booking
+     */
+    public function setConfirmed($confirmed)
+    {
+        $this->confirmed = $confirmed;
+
+        return $this;
+    }
+
+    /**
+     * Get confirmed
+     *
+     * @return bool
+     */
+    public function getConfirmed()
+    {
+        return $this->confirmed;
+    }
+}
+

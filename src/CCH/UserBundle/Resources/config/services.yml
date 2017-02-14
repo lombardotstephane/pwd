@@ -1,0 +1,4 @@
+services:
+#    cch_user.example:
+#        class: CCH\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

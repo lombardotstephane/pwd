@@ -1,0 +1,231 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Detail - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+<!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="" title="">
+                <img src="{{ asset("images/logo-banner.png") }}" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                        <li>Profil</li>
+                    </ul>
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="user-profile__header">
+                                <h4>Stéphane Lombardot</h4>
+                                <span>Membre depuis mai 2015</span>
+                                <p>
+                                    <img src="{{ asset("images/user/img-1.jpg") }}" alt="">
+                                </p>
+                            </div>
+                            <ul class="user-profile__navigation">
+
+                            </ul>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="user-profile__title">Informations</h2>
+
+                            <div class="my-profile">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4 class="my-profile__title">Personelles</h4>
+                                        <ul>
+                                            <li><span>Prénom</span>Stéphane</li>
+                                            <li><span>Nom</span>Lombardot</li>
+                                            <li><span>Email</span>sl@hotmail.be</li>
+                                            <li><span>Num de téléphone</span>0499/158.155</li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <ul>
+                                            <li><span>Date de naissance</span>15 avril 1993</li>
+                                            <li><span>Membre depuis</span>Mai 2015</li>
+                                            <li><span>City</span>Joh@gmail.com</li>
+                                            <li><span>Country of passport</span>+84 973.085.425</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h2 class="user-profile__title">Camping(s)</h2><br>
+                                <div class="row">
+                                    <table class="table">
+                                        <tr>
+                                            <td class="col-md-3">
+                                                <div class="icon">
+                                                    <a href="#"> <img src="{{ asset("images/campings/steph-camping.jpg") }}" alt=""></a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Steph Camping
+                                            </td>
+                                            <td>
+                                                Rendeux, Belgique
+                                            </td>
+                                            <td>
+                                                9.2/10
+                                            </td>
+                                            <td>
+                                                Apd 4€/nuit
+                                            </td>
+                                            <td>
+                                                <a href="#" class="awe-btn awe-btn-1 awe-btn-small">Consulter</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-3">
+                                                <div class="icon">
+                                                    <a href="#"><img src="{{ asset("images/campings/steph-champs.jpg") }}" alt=""></a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                Champètre camping
+                                            </td>
+                                            <td>
+                                                Rendeux, Belgique
+                                            </td>
+                                            <td>
+                                                6.8/10
+                                            </td>
+                                            <td>
+                                                Apd 6€/nuit
+                                            </td>
+                                            <td>
+                                                <a href="#" class="awe-btn awe-btn-1 awe-btn-small">Consulter</a>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                <h2 class="user-profile__title">Avis</h2><br>
+                                <div class="row">
+                                    <!-- Review Item -->
+                                    <div class="row review-item">
+                                        <div class="col-xs-12">
+                                            <div class="review-header">
+                                                <span class="date">3/2/ 2014</span>
+                                                <h4>Steph Camping </h4>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3 review-number">
+                                            <ins>5.6</ins>
+                                        </div>
+                                        <div class="col-xs-9 review-text">
+                                            <ul>
+                                                <li><span class="icon fa fa-plus"></span>Location, warmth, cleanliness
+                                                </li>
+                                                <li><span class="icon icon-minus fa fa-minus"></span>Noisy, expensive
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                Our stay was pleasant and joyful. We stayed in an apartment meant for 3
+                                                adults. First and foremost, close proximity to tube station was the
+                                                reason of choosing this hotel. The cleaning services were fantastic. The
+                                                support services were prompt...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- End Review Item -->
+
+                                    <!-- Review Item -->
+                                    <div class="row review-item">
+                                        <div class="col-xs-12">
+                                            <div class="review-header">
+                                                <span class="date">3/2/ 2014</span>
+                                                <h4>Steph Camping </h4>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-3 review-number">
+                                            <ins>9.0</ins>
+                                        </div>
+                                        <div class="col-xs-9 review-text">
+                                            <ul>
+                                                <li><span class="icon fa fa-plus"></span>Location, warmth, cleanliness
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                Our stay was pleasant and welcoming. We stayed in an apartment meant for
+                                                3 adults with kitchen facilities. The cleaning services were superp. We
+                                                liked the laundry and kitchen cleaning services on top of the regular
+                                                cleaning services. The support services were prompt...much needed extra
+                                                bowls were delivered in a jiffy. Front desk were very cotdial and
+                                                helpful though working under at times. Needed travel arrangements and
+                                                info were delivered with smiles. Delivering luggeges to the room was
+                                                done witbout request.. Computer and printing service in the lobby was
+                                                really helpful...tbe charge reasonable
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <!-- End Review Item -->
+
+                                    <!-- Review Item -->
+                                    <div class="row review-item">
+                                        <div class="col-xs-12">
+                                            <div class="review-header">
+                                                <span class="date">3/2/ 2014</span>
+                                                <h4>Champètre camping</h4>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3 review-number">
+                                            <ins>5.6</ins>
+                                        </div>
+                                        <div class="col-xs-9 review-text">
+                                            <ul>
+                                                <li><span class="icon fa fa-plus"></span>Location, warmth, cleanliness
+                                                </li>
+                                                <li><span class="icon icon-minus fa fa-minus"></span>Noisy, expensive
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                Our stay was pleasant and joyful. We stayed in an apartment meant for 3
+                                                adults. First and foremost, close proximity to tube station was the
+                                                reason of choosing this hotel. The cleaning services were fantastic. The
+                                                support services were prompt...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- End Review Item -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

@@ -1,0 +1,194 @@
+<?php
+
+namespace CCH\CampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Comments
+ *
+ * @ORM\Table(name="comments")
+ * @ORM\Entity(repositoryClass="CCH\CampBundle\Repository\CommentsRepository")
+ */
+class Comments
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\CampBundle\Entity\Camp")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $camp;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text", type="text")
+     */
+    private $text;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="quotation", type="integer")
+     */
+    private $quotation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="advantages", type="string", length=255)
+     */
+    private $advantages;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="disadvantages", type="string", length=255)
+     */
+    private $disadvantages;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_added", type="datetime")
+     */
+    private $dateAdded;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set text
+     *
+     * @param string $text
+     *
+     * @return Comments
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return string
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * Set quotation
+     *
+     * @param integer $quotation
+     *
+     * @return Comments
+     */
+    public function setQuotation($quotation)
+    {
+        $this->quotation = $quotation;
+
+        return $this;
+    }
+
+    /**
+     * Get quotation
+     *
+     * @return int
+     */
+    public function getQuotation()
+    {
+        return $this->quotation;
+    }
+
+    /**
+     * Set advantages
+     *
+     * @param string $advantages
+     *
+     * @return Comments
+     */
+    public function setAdvantages($advantages)
+    {
+        $this->advantages = $advantages;
+
+        return $this;
+    }
+
+    /**
+     * Get advantages
+     *
+     * @return string
+     */
+    public function getAdvantages()
+    {
+        return $this->advantages;
+    }
+
+    /**
+     * Set disadvantages
+     *
+     * @param string $disadvantages
+     *
+     * @return Comments
+     */
+    public function setDisadvantages($disadvantages)
+    {
+        $this->disadvantages = $disadvantages;
+
+        return $this;
+    }
+
+    /**
+     * Get disadvantages
+     *
+     * @return string
+     */
+    public function getDisadvantages()
+    {
+        return $this->disadvantages;
+    }
+
+    /**
+     * Set dateAdded
+     *
+     * @param \DateTime $dateAdded
+     *
+     * @return Comments
+     */
+    public function setDateAdded($dateAdded)
+    {
+        $this->dateAdded = $dateAdded;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAdded
+     *
+     * @return \DateTime
+     */
+    public function getDateAdded()
+    {
+        return $this->dateAdded;
+    }
+}

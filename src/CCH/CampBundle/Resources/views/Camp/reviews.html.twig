@@ -1,0 +1,122 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Avis - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="{{ path("cch_camp_homepage") }}" title="">
+                <img src="{{ asset("images/logo-banner.png") }}" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="{{ path("cch_camp_homepage") }}"><i class="fa fa-home"></i></a></li>
+                        <li><a href="#" title="">Pays</a></li>
+                        <li><a href="#" title="">Region</a></li>
+                        <li><a href="#" title="">Ville</a></li>
+                        <li><a href="{{ path('cch_camp_detail',{'id':app.request.get('id')}) }}" title="">{{ camp.name }}</a></li>
+                        <li>Avis</li>
+                    </ul>
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="row">                      
+                        <div class="col-md-12">
+                            <div class="my-reviews">
+
+                                <h2 class="user-profile__title">Mon avis</h2><br>
+                                <div class="row">
+                                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and myReviews.id == null %}
+                                        {{ form(form) }}
+                                    {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED') and myReviews.id != null %}
+                                        <div class="row review-item">
+                                            <div class="col-xs-12">
+                                                <div class="review-header">
+                                                    <span class="date">{{ myReviews.date | date('d/m/Y') }}</span>
+                                                    <h4>{{ myReviews.user.firstname }} {{ myReviews.user.name }}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3 review-number">
+                                                <ins>{{ myReviews.notation }}</ins>
+                                            </div>
+                                            <div class="col-xs-9 review-text">
+                                                <ul>
+                                                    <li><span class="icon fa fa-plus"></span>{{ myReviews.positive }}
+                                                    </li>
+                                                    <li><span class="icon icon-minus fa fa-minus"></span>{{ myReviews.negative }}
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    {{ myReviews.reviews }}
+                                                </p>
+                                                <a href="{{ path('cch_camp_updateReviews',{'id':app.request.get('id')}) }}" class="btn">Modifier</a>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <p><a href="{{ path('fos_user_security_login') }}">Connectez-vous</a> pour donner votre avis.</p>
+                                    {% endif %}
+                                </div>
+
+
+
+                                <h2 class="user-profile__title">Tous les avis</h2><br>
+                                <div class="row">
+                                    {% if reviews is empty %}
+                                        <p>Pas d'avis pour le moments.</p>
+                                    {% endif%}
+                                    <!-- Review Item -->
+                                    {% for review in reviews %}
+                                        <div class="row review-item">
+                                            <div class="col-xs-12">
+                                                <div class="review-header">
+                                                    <span class="date">{{ review.date | date('d/m/Y') }}</span>
+                                                    <h4>{{ review.user.firstname }} {{ review.user.name }}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3 review-number">
+                                                <ins>{{ review.notation }}</ins>
+                                            </div>
+                                            <div class="col-xs-9 review-text">
+                                                <ul>
+                                                    <li><span class="icon fa fa-plus"></span>{{ review.positive }}
+                                                    </li>
+                                                    <li><span class="icon icon-minus fa fa-minus"></span>{{ review.negative }}
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    {{ review.reviews }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    <!-- End Review Item -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

@@ -1,0 +1,107 @@
+<?php
+
+namespace CCH\CampBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Camp_picture
+ *
+ * @ORM\Table(name="camp_picture")
+ * @ORM\Entity(repositoryClass="CCH\CampBundle\Repository\Camp_pictureRepository")
+ */
+class Camp_picture
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="CCH\CampBundle\Entity\Camp")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $camp;
+    public function __construct()
+    {
+        $this->dateAdded = new \Datetime();
+    }
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image_url", type="string", length=255)
+     */
+    private $imageUrl;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_added", type="datetime")
+     */
+    private $dateAdded;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set imageUrl
+     *
+     * @param string $imageUrl
+     *
+     * @return Camp_picture
+     */
+    public function setImageUrl($imageUrl)
+    {
+        $this->imageUrl = $imageUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get imageUrl
+     *
+     * @return string
+     */
+    public function getImageUrl()
+    {
+        return $this->imageUrl;
+    }
+
+    /**
+     * Set dateAdded
+     *
+     * @param \DateTime $dateAdded
+     *
+     * @return Camp_picture
+     */
+    public function setDateAdded($dateAdded)
+    {
+        $this->dateAdded = $dateAdded;
+
+        return $this;
+    }
+
+    /**
+     * Get dateAdded
+     *
+     * @return \DateTime
+     */
+    public function getDateAdded()
+    {
+        return $this->dateAdded;
+    }
+}
+

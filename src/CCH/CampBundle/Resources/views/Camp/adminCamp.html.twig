@@ -1,0 +1,136 @@
+{% extends "CCHCampBundle::layout.html.twig" %}
+
+{% block title %}
+    Admin Camping - {{ parent() }}
+{% endblock %}
+
+{% block cchcamp_body %}
+    <!--Banner-->
+    <section class="sub-banner">
+        <!--Background-->
+        <div class="bg-parallax bg-1"></div>
+        <!--End Background-->
+        <!-- Logo -->
+        <div class="logo-banner text-center">
+            <a href="{{ path("cch_camp_homepage") }}" title="">
+                <img src="{{ asset('images/logo-banner.png') }}" alt="">
+            </a>
+        </div>
+        <!-- Logo -->
+    </section>
+    <!--End Banner-->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container">
+            <div class="main-cn element-page bg-white clearfix">
+                <!--Breakcrumb-->
+                <section class="breakcrumb-sc">
+                    <ul class="breadcrumb arrow">
+                        <li><a href="{{ path("cch_camp_homepage") }}"><i class="fa fa-home"></i></a></li>
+                        <li>Administration</li>
+                    </ul>
+                </section>
+                <!--End Breakcrumb-->
+
+                <section class="user-profile">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="user-profile__header">
+                                <h4>Espace admin</h4>
+                                <span>Connecté en temps que admin</span>
+                            </div>
+                            <ul class="user-profile__navigation">
+                                <li class="current"><a href="{{ path('cch_admin_campValid') }}">Validation camping</a></li>                               
+                                <li><a href="{{ path('cch_admin_equip') }}">Equipements</a></li>                               
+                                <li><a href="{{ path('cch_admin_activity') }}">Activités</a></li>                               
+                            </ul>
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="user-profile__title">Campings en attente de confirmation</h2>
+
+                            <div class="user-profile__my-booking table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Nom du camping</th>
+                                            <th>Pays</th>
+                                            <th>Région</th>
+                                            <th>Ville</th>
+                                            <th>Prix</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    {% for camp in camps %}
+                                        <tr>
+                                            <td>
+                                                {{ camp.name }}
+                                            </td>
+                                            <td>
+                                                {{ camp.country }}
+                                            </td>
+                                            <td>
+                                                {{ camp.district }}
+                                            </td>
+                                            <td>
+                                                {{ camp.city }}
+                                            </td>
+                                            <td>
+                                                {{ camp.generalPrice }} euro
+                                            </td>
+                                            <td>
+                                                <a href="{{ path('cch_camp_detail',{'id':camp.id}) }}">Voir</a><a href="{{ path('cch_admin_campDelete',{'id':camp.id}) }}">Supprimer</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+
+                            <h2 class="user-profile__title">Campings validés</h2>
+
+                            <div class="user-profile__my-booking table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Nom du camping</th>
+                                            <th>Pays</th>
+                                            <th>Région</th>
+                                            <th>Ville</th>
+                                            <th>Prix</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    {% for validCamp in validCamps %}
+                                        <tr>
+                                            <td>
+                                                {{ validCamp.name }}
+                                            </td>
+                                            <td>
+                                                {{ validCamp.country }}
+                                            </td>
+                                            <td>
+                                                {{ validCamp.district }}
+                                            </td>
+                                            <td>
+                                                {{ validCamp.city }}
+                                            </td>
+                                            <td>
+                                                {{ validCamp.generalPrice }} euro
+                                            </td>
+                                            <td>
+                                                <a href="{{ path('cch_camp_detail',{'id':validCamp.id}) }}">Voir</a><a href="{{ path('cch_admin_campDelete',{'id':validCamp.id}) }}">Supprimer</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+{% endblock %}

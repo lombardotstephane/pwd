@@ -1,0 +1,29 @@
+cch_camp_homepage:
+    path:     /
+    defaults: { _controller: CCHCampBundle:Camp:index }
+
+cch_camp_result:
+    path:     /result
+    defaults: { _controller: CCHCampBundle:Camp:result }
+
+cch_camp_add:
+    path:     /add
+    defaults: { _controller: CCHCampBundle:Camp:add }
+
+cch_camp_detail:
+    path:     /detail
+    defaults: { _controller: CCHCampBundle:Camp:detail }
+
+cch_user_public:
+    path:     /public
+    defaults: { _controller: CCHCampBundle:Camp:public }
+
+cch_user_profil:
+    path:     /profil
+    defaults: { _controller: CCHCampBundle:Camp:profil }
+
+cch_user_signup:
+    path:     /signup
+    defaults: { _controller: CCHCampBundle:Camp:signup }
+
+
